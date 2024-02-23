@@ -6,5 +6,6 @@
         "devcontainer",
         "devcontainers",
         "pylint"
-    ]
+    ],
+    "git.ignoreLimitWarning": true
 }
