@@ -9,7 +9,7 @@
 	"customizations": {
 		// Configure properties specific to VS Code.
 		"vscode": {
-			"settings": {},
+			"settings": {
 			"extensions": [
 				"ms-python.python",
                 "ms-python.vscode-pylance",
@@ -25,10 +25,13 @@
 			]
 		}
 	},
-
-	"appPort": [],
-
 	
+	"portsAttributes": {
+		"1380":  {
+			"label": "Backend",
+			"protocol": "http"
+		}
+	},	
 	
 	"postCreateCommand": "pip install -r /workspaces/The-Innovation-Club/backend/requirements.txt",
 
@@ -37,5 +40,6 @@
 		"ghcr.io/devcontainers-contrib/features/typescript:2": {},
 		"ghcr.io/devcontainers-contrib/features/angular-cli:2": {},
 		"ghcr.io/devcontainers-contrib/features/caddy:1": {}
+		}
 	}
 }
