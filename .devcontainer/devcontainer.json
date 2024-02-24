@@ -1,45 +1,50 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/python
 {
-	"name": "Python 3",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/python:0-3.11",
-
-	// Configure tool-specific properties.
-	"customizations": {
-		// Configure properties specific to VS Code.
-		"vscode": {
-			"settings": {
-			"extensions": [
-				"ms-python.python",
+    "dockerComposeFile": "docker-compose.yml",
+    "workspaceFolder": "/workspace",
+    "service": "httpd",
+    "remoteUser": "vscode",
+    "forwardPorts": [
+        1460,
+        1461,
+        1462
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
                 "ms-python.vscode-pylance",
+                "ms-python.black-formatter",
                 "GitHub.vscode-pull-request-github",
                 "angular.ng-template",
                 "matthewpi.caddyfile-support",
                 "dbaeumer.vscode-eslint",
                 "esbenp.prettier-vscode",
-                "ckolkman.vscode-postgres",
-				"Microsoft.jupyter",
-				"pmneo.tsimporter",
-				"Microsoft.debugpy"
-			]
-		}
-	},
-	
-	"portsAttributes": {
-		"1380":  {
-			"label": "Backend",
-			"protocol": "http"
-		}
-	},	
-	
-	"postCreateCommand": "pip install -r /workspaces/The-Innovation-Club/backend/requirements.txt",
-
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	"features": {
-		"ghcr.io/devcontainers-contrib/features/typescript:2": {},
-		"ghcr.io/devcontainers-contrib/features/angular-cli:2": {},
-		"ghcr.io/devcontainers-contrib/features/caddy:1": {}
-		}
-	}
+                "ckolkman.vscode-postgres"
+            ],
+            "settings": {
+                "editor.formatOnSave": true,
+                "editor.formatOnSaveMode": "file",
+                "[typescript]": {
+                    "editor.defaultFormatter": "esbenp.prettier-vscode"
+                },
+                "[javascript]": {
+                    "editor.defaultFormatter": "esbenp.prettier-vscode"
+                },
+                "[python]": {
+                    "editor.defaultFormatter": "ms-python.black-formatter"
+                },
+                "python.analysis.extraPaths": [
+                    "/backend/"
+                ],
+                "python.testing.pytestEnabled": true,
+                "python.testing.unittestEnabled": false,
+                "python.analysis.diagnosticSeverityOverrides": {
+                    "reportMissingParameterType": "error",
+                    "reportGeneralTypeIssues": "error",
+                    "reportDeprecated": "error",
+                    "reportImportCycles": "error"
+                }
+            }
+        }
+    }
 }

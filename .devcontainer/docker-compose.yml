@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  httpd:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - ..:/workspace
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    environment:
+      - windir # Defined on Windows but not on other platforms
+  db:
+    image: postgres:15.2
+    restart: unless-stopped
+    env_file:
+      - ../backend/.env
+    ports:
+      - '5332:5332'
