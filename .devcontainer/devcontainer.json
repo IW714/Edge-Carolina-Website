@@ -11,22 +11,26 @@
 		"vscode": {
 			"settings": {},
 			"extensions": [
-				"streetsidesoftware.code-spell-checker"
+				"ms-python.python",
+                "ms-python.vscode-pylance",
+                "GitHub.vscode-pull-request-github",
+                "angular.ng-template",
+                "matthewpi.caddyfile-support",
+                "dbaeumer.vscode-eslint",
+                "esbenp.prettier-vscode",
+                "ckolkman.vscode-postgres",
+				"Microsoft.jupyter",
+				"pmneo.tsimporter",
+				"Microsoft.debugpy"
 			]
 		}
 	},
-	
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [9000],
 
-	// Use 'portsAttributes' to set default properties for specific forwarded ports. 
-	// More info: https://containers.dev/implementors/json_reference/#port-attributes
-	"portsAttributes": {
-		"9000": {
-			"label": "Innovation-Club-App",
-			"onAutoForward": "openBrowser"
-		}
-	},
+	"appPort": [],
+
+	
+	
+	"postCreateCommand": "pip install -r /workspaces/The-Innovation-Club/backend/requirements.txt",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
@@ -34,7 +38,4 @@
 		"ghcr.io/devcontainers-contrib/features/angular-cli:2": {},
 		"ghcr.io/devcontainers-contrib/features/caddy:1": {}
 	}
-
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
 }

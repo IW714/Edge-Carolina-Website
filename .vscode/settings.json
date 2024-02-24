@@ -5,7 +5,10 @@
         "Codespaces",
         "devcontainer",
         "devcontainers",
-        "pylint"
+        "koppenhagen",
+        "pmneo",
+        "pylint",
+        "tsimporter"
     ],
     "git.ignoreLimitWarning": true
 }
