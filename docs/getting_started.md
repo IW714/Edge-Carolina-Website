@@ -1,8 +1,8 @@
 ## Prerequisites
 
-* [Docker Desktop](https://www.docker.com/products/docker-desktop/)
-* [VSCode](https://code.visualstudio.com/)
-* [VSCode DevContainers Extension](https://code.visualstudio.com/docs/devcontainers/containers)
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+- [VSCode](https://code.visualstudio.com/)
+- [VSCode DevContainers Extension](https://code.visualstudio.com/docs/devcontainers/containers)
 
 ## Before Starting a DevContainer: Establish a .env File
 
@@ -15,8 +15,8 @@ MODE=development
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=postgres
 POSTGRES_HOST=db
-POSTGRES_PORT=5432
-POSTGRES_DATABASE=csxl
+POSTGRES_PORT=5433
+POSTGRES_DATABASE=innovation
 HOST=localhost
 JWT_SECRET=REPLACE_ME
 ```
@@ -32,22 +32,21 @@ If you see an error on your first attempt, retry once. If the error persists, do
 Once the Dev Container begins, open a terminal and complete the following:
 
 1. Install frontend dependencies:
-    1. `pushd frontend` 
-    2. `npm install`
-    3. `popd`
+   1. `pushd frontend`
+   2. `npm install`
+   3. `popd`
 2. Reload the VS Code Window to ensure plugins are properly loaded:
-    1. `Ctrl+Shift+P` to open the Command Palette
-    2. Type "Reload Window" and select the action "Developer: Reload Window"
-    3. It's unclear why this step is necessary, but it seems to fix issues with plugins initializing on first build of a DevContainer.
+   1. `Ctrl+Shift+P` to open the Command Palette
+   2. Type "Reload Window" and select the action "Developer: Reload Window"
+   3. It's unclear why this step is necessary, but it seems to fix issues with plugins initializing on first build of a DevContainer.
 3. Create database and reset demo data:
-    1. `python3 -m backend.script.create_database`
+   1. `python3 -m backend.script.create_database`
 4. Start dev server processes using the `honcho` process manager
-    1. `honcho start`
-        1. Wait until you see "frontend.1 | Compiled successfully" emitted from the Angular dev server.
-    2. Open `localhost:1460` in a browser and you should see the Innovation site running locally in development.
-    3. To stop the development servers, press `Ctrl+C` in the terminal running `honcho` and close VSCode.
+   1. `honcho start`
+      1. Wait until you see "frontend.1 | Compiled successfully" emitted from the Angular dev server.
+   2. Open `localhost:1460` in a browser and you should see the Innovation site running locally in development.
+   3. To stop the development servers, press `Ctrl+C` in the terminal running `honcho` and close VSCode.
 
 ## Develop in Branches
 
-Before beginning any feature work, fixes, or other modifications, you should checkout a branch to keep the history separate from the `stage` line history until it is ready deploying into production. 
-
+Before beginning any feature work, fixes, or other modifications, you should checkout a branch to keep the history separate from the `stage` line history until it is ready deploying into production.

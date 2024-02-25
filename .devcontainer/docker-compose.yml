@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 services:
   httpd:
@@ -7,6 +7,7 @@ services:
       dockerfile: .devcontainer/Dockerfile
     volumes:
       - ..:/workspace
+      - innovation-node_modules:/workspace/frontend/node_modules
     command: /bin/sh -c "while sleep 1000; do :; done"
     environment:
       - windir # Defined on Windows but not on other platforms
@@ -16,4 +17,10 @@ services:
     env_file:
       - ../backend/.env
     ports:
-      - '5332:5332'
+      - "5433:5433"
+    volumes:
+      - innovation-postgres:/var/lib/postgresql/data
+
+volumes:
+  innovation-node_modules:
+  innovation-postgres:

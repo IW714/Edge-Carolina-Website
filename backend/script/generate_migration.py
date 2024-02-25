@@ -4,7 +4,7 @@ You do not need to make use of this script for development/staging purposes,
 because we always reset the database to a common starting point during dev.
 
 This script is only needed when generating a migration for production to the
-csxl.unc.edu primary deployment database.
+innovation-club primary deployment database.
 
 Usage: python3 -m backend.script.generate_migration [remote] [branch]
 """
