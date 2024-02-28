@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-home",
@@ -10,4 +11,18 @@ export class HomeComponent {
     path: "",
     component: HomeComponent,
   };
+  constructor(private router: Router) {}
+
+  /* playZoomVideo() {
+    const video = document.getElementById("zoomVideo") as HTMLVideoElement;
+    video.style.display = "block";
+    video.play();
+  }
+  public videoEnded() {
+    this.router.navigate(["/about"]);
+  } */
+
+  navigateToAbout() {
+    this.router.navigate(["/about"]);
+  }
 }
