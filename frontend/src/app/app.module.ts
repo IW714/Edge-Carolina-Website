@@ -13,12 +13,12 @@ import { MatListModule } from "@angular/material/list";
 
 // Components
 import { AppComponent } from "./app.component";
-import { TemplateComponent } from "./template/template.component";
+import { HomeComponent } from "./home/home.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    TemplateComponent,
+    HomeComponent,
     // Add other component declarations here
   ],
   imports: [
