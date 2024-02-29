@@ -11,3 +11,28 @@ body {
     align-items: center;
     font-family: 'Montserrat', sans-serif;
   }
+
+  .title {
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    transform: translateY(-250px);
+  }
+
+  .about {
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    /* transform: translateY(-150px); */
+    max-width: 500px;
+  }
+
+  .welcome {
+    transform: translateY(75px) translateX(400px);
+  }
+
+  .mission {
+    transform: translateY(75px) translateX(-400px);
+  }
