@@ -1,0 +1,54 @@
+nav {
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distributes space between and around content */
+    background: rgba(0, 0, 0, 0.529); /* Semi-transparent background */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1200px; /* Adjust max-width as needed */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo styles */
+.logo {
+    height: 60px; /* Adjust size as needed */
+    margin-right: 20px; /* Creates space between logo and nav items */
+    transform: translateX(-100px);
+}
+
+/* Style for the navigation links */
+nav a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 16px; /* Increased font size for better readability */
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 1px;
+    padding: 10px 20px; /* Increased padding for larger clickable area */
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    border: 1px solid transparent; /* Adds a transparent border */
+    border-radius: 10px; /* Slightly rounded corners for aesthetic */
+    height: 100%;
+}
+
+/* Hover effect for links */
+nav a:hover {
+    color: #3be3d2; /* Color for hover state */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.logo {
+    margin-right: auto; /* Pushes the logo to the left */
+    font-size: 24px; /* Larger font size for the logo */
+    text-transform: uppercase;
+    text-decoration: none;
+}
