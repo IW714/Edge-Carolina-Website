@@ -1,0 +1,24 @@
+ <div class="product-card"> 
+  <!-- Header -->
+  <div class="product-card-header">
+    <h3>{{ productData.name }}</h3>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </div>
+
+  <!-- Screenshot -->
+  <div class="product-card-screenshot">
+    <a href="{{ productData.url }}" target="_blank">
+      <img [src]="getScreenshotUrl()" alt="Screenshot of {{ productData.name }}">
+    </a>
+  </div>
+
+  <div class="product-card-content">
+    <p>{{ productData.description }}</p>
+      <button class="edit-button" (click)="editProduct()">
+        <span class="material-icons">settings</span>
+      </button>
+      <button class="delete-button" (click)="deleteProduct()">
+        <span class="material-icons">delete</span>
+      </button>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<body>
+   <main>
+    <section class="product-overview">
+      <h2>Our Products</h2>
+      <p>
+        At Edge Carolina, we offer a range of innovative products designed to
+        enhance your web development experience. Explore our products below:
+      </p>
+      <!-- Create/Edit Product Button -->
+      <button (click)="navigateToCreateProduct()" class="create-button">
+        Create Product
+      </button>
+      <div class="products-container">
+      <product-widget
+        class="product-card"
+        [productData]="product"
+        *ngFor="let product of (productService.products$ | async)!">
+      </product-widget>
+    </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Edge Carolina. All rights reserved.</p>
+  </footer>
+</body>

@@ -1,0 +1,100 @@
+.product-card {
+  max-height: 500px;
+  border-radius: 8px;
+  /* Set border-radius for the entire card */
+  margin-top: 30px;
+}
+
+.product-card-header {
+  background-color: #012f5a;
+  color: #F8F8F8;
+  padding: 12px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  /* Add bottom-left border-radius */
+  border-bottom-right-radius: 8px;
+  /* Add bottom-right border-radius */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.product-card-header h3 {
+  margin: 0;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.product-card-screenshot {
+  text-align: center;
+  padding: 15px;
+  background-color: #F8F8F8;
+  border-bottom-left-radius: 8px;
+  /* Add bottom-left border-radius */
+  border-bottom-right-radius: 8px;
+  /* Add bottom-right border-radius */
+}
+
+.product-card-screenshot img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 8px;
+  /* Set border-radius for the image */
+  transition: transform 0.3s ease-in-out;
+  border: 1px solid gray;
+}
+
+.product-card-screenshot img:hover {
+  transform: scale(1.05);
+}
+
+.product-card-content {
+  position: relative;
+  padding: 15px;
+  font-size: 0.95em;
+  color: #4C4C4C;
+  text-align: center;
+  background-color: #F8F8F8;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100px;
+  border-bottom-left-radius: 8px;
+  /* Add bottom-left border-radius */
+  border-bottom-right-radius: 8px;
+  /* Add bottom-right border-radius */
+  overflow-wrap: break-word;
+  /* Ensure long words can break and wrap to the next line */
+  word-wrap: break-word;
+  /* Legacy property for older browsers */
+  hyphens: auto;
+  /* Automatically add hyphens when breaking words (may not work in all browsers) */
+}
+
+
+.edit-button,
+.delete-button {
+  position: absolute;
+  background-color: transparent;
+  color: gray;
+  border: none;
+  padding: 0;
+  font-size: 1em;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.edit-button {
+  bottom: 10px;
+  left: 10px;
+}
+
+.delete-button:hover {
+  color: #E63946;
+}
+
+.edit-button:hover {
+  color: #012f5a;
+}
+
+.delete-button {
+  bottom: 10px;
+  right: 10px;
+}

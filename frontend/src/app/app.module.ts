@@ -2,7 +2,8 @@ import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HttpClientModule } from "@angular/common/http";
-import { AppRoutingModule } from "./app-routing.module"; // Import AppRoutingModule
+import { AppRoutingModule } from "./app-routing.module";
+import { ReactiveFormsModule } from "@angular/forms";
 
 // Angular Material Components
 import { MatButtonModule } from "@angular/material/button";
@@ -13,12 +14,25 @@ import { MatListModule } from "@angular/material/list";
 
 // Components
 import { AppComponent } from "./app.component";
-import { TemplateComponent } from "./template/template.component";
+import { HomeComponent } from "./home/home.component";
+import { AboutComponent } from "./about/about.component";
+import { NavigationComponent } from "./navigation/navigation.component";
+import { JoinComponent } from "./join/join.component";
+import { ProductsComponent } from "./products/products.component";
+import { ProductWidget } from "./products/product-widget/product.widget";
+import { ProductEditorComponent } from "./products/product-editor/product-editor.component";
+import { RouterModule } from "@angular/router";
 
 @NgModule({
   declarations: [
     AppComponent,
-    TemplateComponent,
+    HomeComponent,
+    AboutComponent,
+    NavigationComponent,
+    JoinComponent,
+    ProductsComponent,
+    ProductWidget,
+    ProductEditorComponent,
     // Add other component declarations here
   ],
   imports: [
@@ -26,6 +40,8 @@ import { TemplateComponent } from "./template/template.component";
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
+    RouterModule,
+    ReactiveFormsModule,
 
     // Angular Material Modules
     MatButtonModule,
